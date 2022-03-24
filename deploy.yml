@@ -17,7 +17,6 @@
          instance_tags:
            server: "{{ hostname }}"
          wait: true
-         name: "{{ hostname }}"
          region: "{{ region }}"
          aws_access_key: AKIA45DDQJO2FD45DCED
          aws_secret_key: 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
