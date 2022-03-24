@@ -7,7 +7,7 @@
       region: us-east-1
       instance_type: t2.nano
       ami: ami-0c02fb55956c7d316
-      hostname: vikas6
+      hostname: server
   tasks:
     - name: Create an ec2 instance
       tags: "ec2"
@@ -19,8 +19,8 @@
            Name: "{{ hostname }}"
          wait: true
          region: "{{ region }}"
-         aws_access_key: AKIAUVWMXFC3P64SF6EG
-         aws_secret_key: 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
+         aws_access_key: AKIAUVWMXFC3NXNSUGKF
+         aws_secret_key: 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
          vpc_subnet_id: subnet-00f58c876e9fada13
          exact_count: 1         
          count_tag: 
