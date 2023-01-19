@@ -1,0 +1,10 @@
+---
+- name: stop ec2
+  hosts: localhost
+  tasks:
+  - name: stop ec2
+    ec2: 
+      region: us-east-1
+      state: stopped
+      instance_tags:
+        Name: webserver
