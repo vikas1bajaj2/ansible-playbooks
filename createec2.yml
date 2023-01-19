@@ -1,0 +1,18 @@
+---
+- name: launch ec2
+  hosts: localhost
+  tasks:
+  - name: creating ec2
+    ec2:
+      key_name: vicky
+      instance_type: t2.micro
+      image: ami-0b5eea76982371e91
+      region: us-east-1
+      wait: yes
+      group: default
+      instance_tags:
+        Name: webserver
+      exact_count: 1
+      count_tag: Name
+      vpc_subnet_id: subnet-08c091ba97884983b
+      assign_public_ip: yes
